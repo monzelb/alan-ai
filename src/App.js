@@ -3,7 +3,12 @@ import alanBtn from '@alan-ai/alan-sdk-web';
 import wordsToNumbers from 'words-to-numbers';
 import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles.js';
-const alanKey = '58a43290e335daa62874bb71e6f3febb2e956eca572e1d8b807a3e2338fdd0dc/stage';
+
+require('dotenv').config({path: __dirname + '/.env'})
+
+const alanKey = process.env.REACT_APP_API_KEY;
+
+console.log(alanKey);
 const App = () => {
     const [newsArticles, setNewsArticles] = useState([]);
     const [activeArticle, setActiveArticle] = useState(-1);
@@ -50,5 +55,11 @@ const App = () => {
         </div>
     );
 }
+
+process.on('SIGINT', function() {
+    console.log( "\nGracefully shutting down from SIGINT (Ctrl-C)" );
+    // some other closing procedures go here
+    process.exit(1);
+  });
 
 export default App;
