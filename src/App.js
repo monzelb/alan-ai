@@ -8,7 +8,6 @@ require('dotenv').config({path: __dirname + '/.env'})
 
 const alanKey = process.env.REACT_APP_API_KEY;
 
-console.log(alanKey);
 const App = () => {
     const [newsArticles, setNewsArticles] = useState([]);
     const [activeArticle, setActiveArticle] = useState(-1);
