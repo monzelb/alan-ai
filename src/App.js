@@ -50,7 +50,6 @@ const App = () => {
             <div className={classes.logoContainer}>
                 <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="Alan Logo" />
             </div>
-            <p>Click on the microphone button to ask for news!</p>
             <NewsCards articles={newsArticles} activeArticle={activeArticle} />
         </div>
     );
