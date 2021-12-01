@@ -48,7 +48,7 @@ const App = () => {
     return (
         <div>
             <div className={classes.logoContainer}>
-                <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="Alan Logo" />
+                <img src="https://alan.app/static/alan-logo-medium-text-and-icon.986d8ae5.svg" width="300" className={classes.alanLogo} alt="Alan Logo" />
             </div>
             <NewsCards articles={newsArticles} activeArticle={activeArticle} />
         </div>
