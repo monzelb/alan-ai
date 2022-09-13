@@ -10,7 +10,7 @@ const NewsCard = ({ article: { description, publishedAt, source, title, url, url
 
     useEffect(() => {
         window.scroll(0, 0);
-    
+
         setElRefs((refs) => Array(20).fill().map((_, j) => refs[j] || createRef()));
       }, []);
 
@@ -32,11 +32,11 @@ const NewsCard = ({ article: { description, publishedAt, source, title, url, url
                 <CardContent>
                     <Typography variant="body2" color="textSecondary" component="p">{description}</Typography>
                 </CardContent>
+                <CardActions className={classes.cardActions}>
+                    <Button size="small" color="primary">Learn More</Button>
+                    <Typography variant="h5" color="textSecondary">{i + 1}</Typography>
+                </CardActions>
             </CardActionArea>
-            <CardActions className={classes.cardActions}>
-                <Button size="small" color="primary">Learn More</Button>
-                <Typography variant="h5" color="textSecondary">{i + 1}</Typography>
-            </CardActions>
         </Card>
     )
 }
